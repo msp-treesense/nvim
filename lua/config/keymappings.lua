@@ -27,8 +27,8 @@ keymap("n", "<C-s>", ":w<CR>", silent)
 keymap("i", "<C-s>", "<ESC> :w<CR>", silent)
 
 -- Telescope
-keymap("n", "<C-p>", "<CMD>lua require('plugins.telescope').project_files()<CR>")
-keymap("n", "<S-p>", "<CMD>lua require('plugins.telescope.pickers.multi-rg')()<CR>")
+keymap("n", "<A-F>", "<CMD>lua require('plugins.telescope').project_files()<CR>")
+keymap("n", "<A-r>", "<CMD>lua require('plugins.telescope.pickers.multi-rg')()<CR>")
 
 -- Remove highlights
 keymap("n", "<CR>", ":noh<CR><CR>", silent)

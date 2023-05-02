@@ -50,6 +50,8 @@ local options = {
 local globals = {
   mapleader                   = ' ',        --- Map leader key to SPC
   speeddating_no_mappings     = 1,          --- Disable default mappings for speeddating
+  python_host_prog            = '/usr/bin/python',
+  python3_host_prog           = '/usr/bin/python3',
 }
 
 vim.opt.shortmess:append('c');

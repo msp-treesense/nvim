@@ -125,6 +125,7 @@ lspconfig.vuels.setup({
   init_options = require("lsp.servers.vuels").init_options,
   on_attach = on_attach,
 })
+-- lspconfig.pyright.setup{}
 
 for _, server in ipairs({ "bashls", "emmet_ls", "graphql", "html", "volar", "prismals" }) do
   lspconfig[server].setup({
@@ -138,3 +139,13 @@ require("ufo").setup({
   fold_virt_text_handler = ufo_config_handler,
   close_fold_kinds = { "imports" },
 })
+
+-- vim.cmd [[autocmd BufWritePre *.py lua vim.lsp.buf.format()]]
+-- vim.cmd [[autocmd BufWritePre *.ts lua vim.lsp.buf.format()]]
+-- vim.cmd [[autocmd BufWritePre *.tsx lua vim.lsp.buf.format()]]
+-- vim.cmd [[autocmd BufWritePre *.js lua vim.lsp.buf.format()]]
+-- vim.cmd [[autocmd BufWritePre *.jsx lua vim.lsp.buf.format()]]
+-- vim.cmd [[autocmd BufWritePre *.h lua vim.lsp.buf.format()]]
+-- vim.cmd [[autocmd BufWritePre *.cpp lua vim.lsp.buf.format()]]
+-- vim.cmd [[autocmd BufWritePre *.ino lua vim.lsp.buf.format()]]
+

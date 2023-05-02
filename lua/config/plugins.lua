@@ -65,7 +65,7 @@ return {
 			"NvimTreeFindFileToggle",
 		},
 		keys = {
-			{ "<C-e>", "<cmd>lua require('nvim-tree.api').tree.toggle()<CR>", desc = "NvimTree" },
+			{ "<A-t>", "<cmd>lua require('nvim-tree.api').tree.toggle()<CR>", desc = "NvimTree" },
 		},
 		config = function()
 			require("plugins.tree")
@@ -464,6 +464,10 @@ return {
 		config = function()
 			require("plugins.chat-gpt")
 		end,
+      requires = {
+            "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim"},
 		cmd = {
 			"ChatGPT",
 			"ChatGPTEditWithInstructions",
